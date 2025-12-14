@@ -2,8 +2,10 @@ flask
 flask-cors
 tensorflow
 transformers
+tf-keras
 opencv-python-headless
 numpy
 Pillow
 matplotlib
 gunicorn
+werkzeug
