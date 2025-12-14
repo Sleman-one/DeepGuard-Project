@@ -18,8 +18,8 @@ import transformers
 import tensorflow as tf
 
 # ------------------ model paths (adjust if needed) ------------------------
-MODEL_PATH = (
-    r"/home/sleman-one/project/uitest/uitest/uitest/models/transformers_model_3.keras"
+MODEL_PATH = os.path.join(
+    os.path.dirname(__file__), "models", "transformers_model_3.keras"
 )
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 HEATMAP_DIR = os.path.join(BASE_DIR, "static", "heatmaps")
