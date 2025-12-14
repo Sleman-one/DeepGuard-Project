@@ -309,6 +309,8 @@ export default function App() {
         };
     }, []);
 
+    console.log(serverPred);
+
     const stars = useMemo(
         () =>
             Array.from({ length: 160 }).map((_, i) => ({
