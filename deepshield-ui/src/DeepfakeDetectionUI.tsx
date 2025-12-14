@@ -128,7 +128,7 @@ const copy = {
             datasets: ["Deepfake and real images dataset from Kaggle by Manjil Karki"],
             libs: ['Flask', 'TensorFlow', 'OpenCV', 'Numpy', 'transformers'],
         },
-       
+
         footer: {
             rights: "جميع الحقوق محفوظة.",
             privacy: "الخصوصية",
@@ -254,7 +254,7 @@ export default function App() {
             const formData = new FormData();
             formData.append("image", file);
 
-            const resp = await fetch("/analyze", { method: "POST", body: formData });
+            const resp = await fetch("https://sleman-one-deepguard-backend.hf.space/analyze", { method: "POST", body: formData });
             const data = await resp.json();
 
             const pred = (data?.prediction || "fake").toString().toLowerCase() as "fake" | "real";
