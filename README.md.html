@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #56a8f5;}
+.s4 { color: #c77dbb; font-style: italic;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+README.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s2">React + TypeScript + Vite</span>
+
+<span class="s2">This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.</span>
+
+<span class="s2">Currently, two official plugins are available</span><span class="s1">:</span>
+
+<span class="s0">- </span><span class="s1">[</span><span class="s2">@vitejs/plugin-react</span><span class="s1">](</span><span class="s3">https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react</span><span class="s1">) </span><span class="s2">uses </span><span class="s1">[</span><span class="s2">Babel</span><span class="s1">](</span><span class="s3">https://babeljs.io/</span><span class="s1">) </span><span class="s2">for Fast Refresh</span>
+<span class="s0">- </span><span class="s1">[</span><span class="s2">@vitejs/plugin-react-swc</span><span class="s1">](</span><span class="s3">https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc</span><span class="s1">) </span><span class="s2">uses </span><span class="s1">[</span><span class="s2">SWC</span><span class="s1">](</span><span class="s3">https://swc.rs/</span><span class="s1">) </span><span class="s2">for Fast Refresh</span>
+
+<span class="s0">## </span><span class="s2">Expanding the ESLint configuration</span>
+
+<span class="s2">If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules</span><span class="s1">:</span>
+
+<span class="s0">```</span><span class="s4">js</span>
+<span class="s5">export default defineConfig([</span>
+  <span class="s5">globalIgnores(['dist']),</span>
+  <span class="s5">{</span>
+    <span class="s5">files: ['**/*.{ts,tsx}'],</span>
+    <span class="s5">extends: [</span>
+      <span class="s5">// Other configs...</span>
+
+      <span class="s5">// Remove tseslint.configs.recommended and replace with this</span>
+      <span class="s5">tseslint.configs.recommendedTypeChecked,</span>
+      <span class="s5">// Alternatively, use this for stricter rules</span>
+      <span class="s5">tseslint.configs.strictTypeChecked,</span>
+      <span class="s5">// Optionally, add this for stylistic rules</span>
+      <span class="s5">tseslint.configs.stylisticTypeChecked,</span>
+
+      <span class="s5">// Other configs...</span>
+    <span class="s5">],</span>
+    <span class="s5">languageOptions: {</span>
+      <span class="s5">parserOptions: {</span>
+        <span class="s5">project: ['./tsconfig.node.json', './tsconfig.app.json'],</span>
+        <span class="s5">tsconfigRootDir: import.meta.dirname,</span>
+      <span class="s5">},</span>
+      <span class="s5">// other options...</span>
+    <span class="s5">},</span>
+  <span class="s5">},</span>
+<span class="s5">])</span>
+<span class="s0">```</span>
+
+<span class="s2">You can also install </span><span class="s1">[</span><span class="s2">eslint-plugin-react-x</span><span class="s1">](</span><span class="s3">https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x</span><span class="s1">) </span><span class="s2">and </span><span class="s1">[</span><span class="s2">eslint-plugin-react-dom</span><span class="s1">](</span><span class="s3">https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom</span><span class="s1">) </span><span class="s2">for React-specific lint rules</span><span class="s1">:</span>
+
+<span class="s0">```</span><span class="s4">js</span>
+<span class="s5">// eslint.config.js</span>
+<span class="s5">import reactX from 'eslint-plugin-react-x'</span>
+<span class="s5">import reactDom from 'eslint-plugin-react-dom'</span>
+
+<span class="s5">export default defineConfig([</span>
+  <span class="s5">globalIgnores(['dist']),</span>
+  <span class="s5">{</span>
+    <span class="s5">files: ['**/*.{ts,tsx}'],</span>
+    <span class="s5">extends: [</span>
+      <span class="s5">// Other configs...</span>
+      <span class="s5">// Enable lint rules for React</span>
+      <span class="s5">reactX.configs['recommended-typescript'],</span>
+      <span class="s5">// Enable lint rules for React DOM</span>
+      <span class="s5">reactDom.configs.recommended,</span>
+    <span class="s5">],</span>
+    <span class="s5">languageOptions: {</span>
+      <span class="s5">parserOptions: {</span>
+        <span class="s5">project: ['./tsconfig.node.json', './tsconfig.app.json'],</span>
+        <span class="s5">tsconfigRootDir: import.meta.dirname,</span>
+      <span class="s5">},</span>
+      <span class="s5">// other options...</span>
+    <span class="s5">},</span>
+  <span class="s5">},</span>
+<span class="s5">])</span>
+<span class="s0">```</span>
+</pre>
+</body>
+</html>

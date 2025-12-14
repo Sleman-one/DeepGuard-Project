@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer utilities {
+    .font-arabic {
+        font-family: 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif !important;
+    }
+}

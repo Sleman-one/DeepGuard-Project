@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>eslint.config.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+eslint.config.js</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">js from </span><span class="s2">'@eslint/js'</span>
+<span class="s0">import </span><span class="s1">globals from </span><span class="s2">'globals'</span>
+<span class="s0">import </span><span class="s1">reactHooks from </span><span class="s2">'eslint-plugin-react-hooks'</span>
+<span class="s0">import </span><span class="s1">reactRefresh from </span><span class="s2">'eslint-plugin-react-refresh'</span>
+<span class="s0">import </span><span class="s1">tseslint from </span><span class="s2">'typescript-eslint'</span>
+<span class="s0">import </span><span class="s3">{ </span><span class="s1">defineConfig</span><span class="s3">, </span><span class="s1">globalIgnores </span><span class="s3">} </span><span class="s1">from </span><span class="s2">'eslint/config'</span>
+
+<span class="s0">export default </span><span class="s1">defineConfig</span><span class="s3">([</span>
+  <span class="s1">globalIgnores</span><span class="s3">([</span><span class="s2">'dist'</span><span class="s3">]),</span>
+  <span class="s3">{</span>
+    <span class="s1">files</span><span class="s3">: [</span><span class="s2">'**/*.{ts,tsx}'</span><span class="s3">],</span>
+    <span class="s0">extends</span><span class="s3">: [</span>
+      <span class="s1">js</span><span class="s3">.</span><span class="s1">configs</span><span class="s3">.</span><span class="s1">recommended</span><span class="s3">,</span>
+      <span class="s1">tseslint</span><span class="s3">.</span><span class="s1">configs</span><span class="s3">.</span><span class="s1">recommended</span><span class="s3">,</span>
+      <span class="s1">reactHooks</span><span class="s3">.</span><span class="s1">configs</span><span class="s3">[</span><span class="s2">'recommended-latest'</span><span class="s3">],</span>
+      <span class="s1">reactRefresh</span><span class="s3">.</span><span class="s1">configs</span><span class="s3">.</span><span class="s1">vite</span><span class="s3">,</span>
+    <span class="s3">],</span>
+    <span class="s1">languageOptions</span><span class="s3">: {</span>
+      <span class="s1">ecmaVersion</span><span class="s3">: </span><span class="s4">2020</span><span class="s3">,</span>
+      <span class="s1">globals</span><span class="s3">: </span><span class="s1">globals</span><span class="s3">.</span><span class="s1">browser</span><span class="s3">,</span>
+    <span class="s3">},</span>
+  <span class="s3">},</span>
+<span class="s3">])</span>
+</pre>
+</body>
+</html>
