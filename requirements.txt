@@ -6,4 +6,4 @@ opencv-python-headless
 numpy
 Pillow
 matplotlib
-gunicorngit
+gunicorn
